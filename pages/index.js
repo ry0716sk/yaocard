@@ -5,16 +5,17 @@ export default function Home() {
 
   const containerStyle = {
     minHeight: "100vh",
-    background: "#fff",
+    background: "#FFFFFF", // 背景は白
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     perspective: "1000px", // 3D効果のためにperspectiveを追加
+    animation: "float 3s ease-in-out infinite", // 浮遊アニメーションをコンテナに適用
   };
 
   const cardStyle = {
     background: "linear-gradient(135deg, #2a34c0, #3640E0)", // グラデーションを追加
-    borderRadius: "10px",
+    borderRadius: "10px", // 角丸
     width: 500,
     height: 300,
     boxShadow: isHovered ? "0px 15px 30px 0px rgba(0,0,0,0.3), 0px 5px 10px 0px rgba(0,0,0,0.1)" : "0px 5px 15px 0px rgba(0,0,0,0.15)", // よりリッチな影
@@ -22,8 +23,8 @@ export default function Home() {
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
-    transition: "transform 0.3s ease-out, box-shadow 0.3s ease-out",
-    transform: isHovered ? "scale(1.05) rotateX(8deg) rotateY(8deg) translateZ(20px)" : "scale(1) rotateX(0deg) rotateY(0deg) translateZ(0px)",
+    transition: "transform 0.5s ease-out, box-shadow 0.5s ease-out", // スムーズなアニメーション
+    transform: isHovered ? "scale(1.05) rotateX(8deg) rotateY(8deg) translateZ(20px)" : "scale(1) rotateX(0deg) rotateY(0deg) translateZ(0px)", // ホバー時の立体効果
     position: "relative", // 光沢レイヤーの配置のため
     overflow: "hidden", // 光沢レイヤーをカード内にクリップするため
   };
